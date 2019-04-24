@@ -82,7 +82,7 @@ See: [example/index.js](example/index.android.js)
 1.  In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
 2.  Go to `node_modules` ➜ `react-native-nordic-dfu` and add `RNNordicDfu.xcodeproj`
 3.  In XCode, in the project navigator, select your project. Add `libRNNordicDfu.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4.  Drag and drop `Zip.framework` and `iOSDFULibrary.framework` into your project
+4.  Drag and drop `ZIPFoundation.framework` and `iOSDFULibrary.framework` into your project
 5.  Add `$(SRCROOT)/../node_modules/react-native-nordic-dfu/ios` as a `recursive` framework search path under `[your project] > Build Settings > Search Paths > Framework Search Paths`
 6.  Add `$(SRCROOT)/../node_modules/react-native-nordic-dfu/ios` as a header search path under `[your project] > Build Settings > Search Paths > Header Search Paths`
 7.  Add both frameworks under `[your project] > General > Embedded binaries`
@@ -113,7 +113,7 @@ This package contains pre-built frameworks for Nordic's native DFU library. To u
 1.  Update library version in `ios/Cartfile`
 2.  Navigate to `ios/`
 3.  Execute `carthage update --platform iOS`
-4.  Copy the files `Zip.framework` and `iOSDFULibrary.framework` to `ios/`
+4.  Copy the files `ZIPFoundation.framework` and `iOSDFULibrary.framework` to `ios/`
 5.  Rebuild demo project
 
 ## Resources
