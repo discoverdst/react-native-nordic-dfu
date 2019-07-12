@@ -225,6 +225,7 @@ RCT_EXPORT_METHOD(startDFU:(NSString *)deviceAddress
         initiator.logger = self;
         initiator.delegate = self;
         initiator.progressDelegate = self;
+        initiator.packetReceiptNotificationParameter = 5;
 
         DFUServiceController * controller = [initiator start];
       }
