@@ -205,7 +205,7 @@ RCT_EXPORT_METHOD(startDFU:(NSString *)deviceAddress
       reject(@"nil_file_path", @"Attempted to start DFU with nil filePath", nil);
     } else {
       NSUUID * uuid = [[NSUUID alloc] initWithUUIDString:deviceAddress];
-
+      while (centralManager.state != CBManagerStatePoweredOn){}
       NSArray<CBPeripheral *> * peripherals = [centralManager retrievePeripheralsWithIdentifiers:@[uuid]];
 
       if ([peripherals count] != 1) {
