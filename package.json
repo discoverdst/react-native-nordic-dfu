@@ -23,6 +23,7 @@
   "devDependencies": {
     "documentation": "^4.0.0-rc.1",
     "husky": "^0.13.3",
+    "jetifier": "^2.0.0",
     "lint-staged": "^3.4.0",
     "prettier": "^1.2.2"
   },
